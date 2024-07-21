@@ -1,0 +1,29 @@
+
+Définition :
+Le patron stratégie est un patron de conception comportemental qui permet de définir une famille
+d'algorithmes, de les encapsuler dans des classes séparées et de les rendre interchangeables. Ce
+patron permet au comportement d'un objet de varier indépendamment de son contexte d'utilisation.
+
+
+Structure :
+1. Le contexte
+    Méthode : setStratégie(IStrategie strategie) -> Défini la stratégie choisie
+              doSomething(strategie.execute())   -> Appelle la stratégie et l'exécute
+2. Interface Stratégie
+3. Stratégie concrète
+    Implémente la méthode de l'interface IStrategie
+
+
+Avantage(s):                                        Désavantage(s):
+- Permet de permuter l'algorithme utilisé           - Ne convient pas aux petits projets qui sont composés
+à l'intérieur d'un objet à l'exécution              de petits algorithmes peu complexe
+- Permet de séparer les détails de                  - Le client doit pouvoir comparer les différentes
+l'implémentation d'un algorithme et le code         stratégies et choisir la bonne
+qui l'utilise                                       - Surcharge de classes
+- Permet de remplacer l'héritage par la             - Augmentation de la complexité globale du système en
+composition                                         introduisant de nombreuses classes supplémentaires
+- Permet d'ajouter de nouvelles stratégies          - Dépendance à l'abstraction
+sans avoir à modifier le contexte
+- Testtabilité
+- Réutilisation du code
+- Simplification du code

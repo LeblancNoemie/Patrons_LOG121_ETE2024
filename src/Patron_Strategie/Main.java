@@ -1,8 +1,7 @@
 package Patron_Strategie;
 
-public class Main_PS {
-
-    public void executeMain(){
+public class Main {
+    public static void main(String[] args) {
         StrategyReverseEncryption re = new StrategyReverseEncryption();
         StrategyCeasarCipherEncryption cce = new StrategyCeasarCipherEncryption();
 
